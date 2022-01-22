@@ -1,0 +1,30 @@
+.App {
+  text-align: center;
+  background-color: aqua;
+  margin-left: 210px;
+  margin-right: 100px;
+  margin-top: 30px;
+  border-radius: 20px;
+  width: 70%;
+}
+
+
+ 
+
+.First-name {
+  margin: 20px;
+}
+.Second-name {
+  margin: 20px;
+}
+.Other-name {
+  margin: 20px;
+}
+
+.User-name {
+  margin: 20px;
+}
+.Password {
+  margin: 20px;
+}
+
