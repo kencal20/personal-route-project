@@ -1,5 +1,6 @@
 import React from 'react';
 import "../Main_styles.css"
+import { Link } from 'react-router-dom';
 const Login = () => {
     return (
         <div className='App'>
@@ -10,7 +11,10 @@ const Login = () => {
           </div>
           <div className="Password">
             <input type="password" placeholder="Password" />
-    
+            <p>New Here?</p>
+            <Link to="/signup">
+            <button type="button">Signup</button>
+          </Link>
           </div>
         </div>
     );

@@ -1,11 +1,10 @@
 import "../Main_styles.css";
 import React from "react";
-
+import { Link } from "react-router-dom";
 
 function Signup() {
   return (
     <>
-     
       <div className="App">
         <div className="Title">
           <h1>SIGNUP</h1>
@@ -32,10 +31,20 @@ function Signup() {
           </div>
           <div className="Password">
             <input type="password" placeholder="Password" />
+            <br></br>
+            <div className="Gender" />
+            <h3>Sex</h3>
+            <label>Male</label>
+            <input type="radio" />
+            <label>Female</label>
+            <input type="radio" />
           </div>
           <input type="reset" />
-          <input type="submit"/>
-         
+          <input type="submit" />
+          <p>Already a member?</p>
+          <Link to="/login">
+            <button type="button">Login</button>
+          </Link>
         </div>
       </div>
     </>
