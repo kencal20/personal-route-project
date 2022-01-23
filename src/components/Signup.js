@@ -43,7 +43,7 @@ function Signup() {
           <input type="submit" />
           <p>Already a member?</p>
           <Link to="/login">
-            <button type="button">Login</button>
+            <p>Login</p>
           </Link>
         </div>
       </div>
