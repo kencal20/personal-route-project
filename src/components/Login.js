@@ -30,7 +30,7 @@ class Login extends Component {
           <input
             type="text"
             placeholder="User Name "
-            name="Firstname"
+            name="Username"
             value={this.state.Username}
             onChange={this.handlechange}
           />
@@ -40,19 +40,19 @@ class Login extends Component {
             type="password"
             placeholder="Password"
             name="Password"
-            value={this.state.Username}
+            value={this.state.Password}
             onChange={this.handlechange}
           />
-          <div>
+          </div>
             <input type ="reset"/>
             <input type="submit"/>
-          </div>
+          
           <p>New Here?</p>
           <Link to="/signup">
-            <button type="button">Signup</button>
+            <p>Signup</p>
           </Link>
         </div>
-      </div>
+      
     );
   }
 }
