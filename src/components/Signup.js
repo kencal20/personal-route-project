@@ -2,9 +2,26 @@ import "../Main_styles.css";
 import React from "react";
 import { Link } from "react-router-dom";
 
-function Signup() {
-  return (
-    <>
+class Signup extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {value: ''};
+
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  handleChange(e) {
+    this.setState({value: e.target.value});
+  }
+  handleSubmit(e) {
+    alert('A name was submitted: ' + this.state.value);
+    e.preventDefault();
+  }
+ 
+  render() {
+    return (
+      <form onSubmit={this.handleSubmit}>
       <div className="App">
         <div className="Title">
           <h1>SIGNUP</h1>
@@ -15,27 +32,27 @@ function Signup() {
         </div>
         <form>
           <div className="First-name">
-            <input type="text" placeholder="First Name" />
+            <input type="text" placeholder="First Name"  value={this.state.value} onChange={this.handleChange}/>
           </div>
           <div className="Other-name">
             <input type="text" placeholder="Other Name (Optional)" />
           </div>
           <div className="Last-name">
-            <input type="text" placeholder="Last Name" />
+            <input type="text" placeholder="Last Name"  value={this.state.value} onChange={this.handleChange} />
           </div>
           <div className="User-name">
-            <input type="text" placeholder="User Name" />
+            <input type="text" placeholder="User Name"  value={this.state.value} onChange={this.handleChange} />
           </div>
           <div className="Email">
-            <input type="text" placeholder="Email    example@hkitz.com" />
+            <input type="text" placeholder="Email   example@hkitz.com"  value={this.state.value} onChange={this.handleChange} />
           </div>
           <div className="Password">
-            <input type="password" placeholder="Password" />
+            <input type="password" placeholder="Password"  value={this.state.value} onChange={this.handleChange} />
             <br></br>
             <div className="Gender" />
             <h3>Sex</h3>
             <label>Male</label>
-            <input type="radio" />
+            <input type="radio"   />
             <label>Female</label>
             <input type="radio" />
           </div>
@@ -47,8 +64,7 @@ function Signup() {
           <p>Login</p>
         </Link>
       </div>
-    </>
+    </form>
   );
-}
-
-export default Signup;
+};
+     export default Signup;
