@@ -1,10 +1,39 @@
 import "../Main_styles.css";
-import React from "react";
+import React,{Component} from "react";
 import { Link } from "react-router-dom";
+class RegistrationForm extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      Firstname: "",
+      Othername: "",
+      Lastname: "",
+      Username: "",
+      Email: "",
+      Password: "",
+      Gender: "",
+     };
+  }
+  handlechange=(e) =>{ 
+    this.setState({[e.target.name]:e.target.value});
+  };
 
-function Signup() {
+handleSubmit=(e)=>{
+  e.preventDefault();console.log(this.state);
+
+    this.setstate =({
+      Firstname: "",
+      Othername: "",
+      Lastname: "",
+      Username: "",
+      Email: "",
+      Password: "",
+      Gender: "",
+  });
+  };
+render() {
   return (
-    <>
+    <form onSubmit={this.handleSubmit} >
       <div className="App">
         <div className="Title">
           <h1>SIGNUP</h1>
@@ -47,8 +76,9 @@ function Signup() {
           </Link>
         </div>
       </div>
-    </>
+    </form>
   );
 }
+  }
 
 export default Signup;
