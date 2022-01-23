@@ -45,7 +45,7 @@ class Signup extends Component {
           <div className="input">
             <div className="First-name">
               <input
-                name="name"
+                name="Firstname"
                 type="text"
                 placeholder="First Name"
                 value={this.state.Firstname}
@@ -54,6 +54,7 @@ class Signup extends Component {
             </div>
             <div className="Other-name">
               <input
+                name="Othername"
                 type="text"
                 placeholder="Other Name (Optional)"
                 value={this.state.Othername}
@@ -62,6 +63,7 @@ class Signup extends Component {
             </div>
             <div className="Last-name">
               <input
+                name="Lastname"
                 type="text"
                 placeholder="Last Name"
                 value={this.state.Lastname}
@@ -70,6 +72,7 @@ class Signup extends Component {
             </div>
             <div className="User-name">
               <input
+                name="Username"
                 type="text"
                 placeholder="User Name"
                 value={this.state.Username}
@@ -78,6 +81,7 @@ class Signup extends Component {
             </div>
             <div className="Email">
               <input
+                name="Email"
                 type="text"
                 placeholder="Email    example@hkitz.com"
                 onChange={this.handlechange}
@@ -87,6 +91,7 @@ class Signup extends Component {
 
             <div className="Password">
               <input
+                name="Password"
                 type="password"
                 placeholder="Password"
                 value={this.state.Password}
