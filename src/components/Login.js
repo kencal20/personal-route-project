@@ -23,6 +23,7 @@ class Login extends Component {
 
   render() {
     return (
+      <form onSubmit={this.handleSubmit}>
       <div className="App">
         <h1>Login</h1>
         <p>Hello member</p>
@@ -43,16 +44,27 @@ class Login extends Component {
             value={this.state.Password}
             onChange={this.handlechange}
           />
-          </div>
-            <input type ="reset"/>
-            <input type="submit"/>
-          
-          <p>New Here?</p>
-          <Link to="/signup">
-            <p>Signup</p>
-          </Link>
         </div>
-      
+        <button
+          style={{
+            background: "dodgerblue",
+            width: "10%",
+            height: "30px",
+            margin: "20px",
+            border: ["1px", "dodgerblue", "solid"],
+            borderRadius: "6px",
+            color: "white",
+          }}
+        >
+          login
+        </button>
+
+        <p>New Here?</p>
+        <Link to="/signup">
+          <p>Signup</p>
+        </Link>
+      </div>
+      </form>
     );
   }
 }
