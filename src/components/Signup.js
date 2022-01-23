@@ -11,16 +11,17 @@ class Signup extends Component {
       Username: "",
       Email: "",
       Password: "",
-      Gender: "",
     };
   }
   handlechange = (e) => {
+    e.preventDefault();
     this.setState({ [e.target.name]: e.target.value });
+    console.log(this.state);
   };
 
   handleSubmit = (e) => {
     e.preventDefault();
-    console.log(this.state);
+    console.log("form submitted", this.state);
     this.setstate = {
       Firstname: "",
       Othername: "",
@@ -28,7 +29,6 @@ class Signup extends Component {
       Username: "",
       Email: "",
       Password: "",
-      Gender: "",
     };
   };
   render() {
@@ -48,6 +48,7 @@ class Signup extends Component {
                 name="Firstname"
                 type="text"
                 placeholder="First Name"
+                required
                 value={this.state.Firstname}
                 onChange={this.handlechange}
               />
@@ -66,6 +67,7 @@ class Signup extends Component {
                 name="Lastname"
                 type="text"
                 placeholder="Last Name"
+                required
                 value={this.state.Lastname}
                 onChange={this.handlechange}
               />
@@ -75,6 +77,7 @@ class Signup extends Component {
                 name="Username"
                 type="text"
                 placeholder="User Name"
+                required
                 value={this.state.Username}
                 onChange={this.handlechange}
               />
@@ -82,8 +85,9 @@ class Signup extends Component {
             <div className="Email">
               <input
                 name="Email"
-                type="text"
+                type="email"
                 placeholder="Email    example@hkitz.com"
+                required
                 onChange={this.handlechange}
                 value={this.state.Email}
               />
@@ -94,27 +98,28 @@ class Signup extends Component {
                 name="Password"
                 type="password"
                 placeholder="Password"
+                required
                 value={this.state.Password}
                 onChange={this.handlechange}
               />
               <br></br>
-              <div className="Gender" />
-              <h3>Sex</h3>
-              <label>Male</label>
-              <input
-                type="radio"
-                value={this.state.Gender}
-                onChange={this.handlechange}
-              />
-              <label>Female</label>
-              <input
-                type="radio"
-                value={this.state.Gender}
-                onChange={this.handlechange}
-              />
+             
             </div>
-            <input type="reset" />
-            <input type="submit" />
+            <button
+              style={{
+                background: "dodgerblue",
+                width: "10%",
+                height: "30px",
+                margin: "20px",
+                border: ["1px", "dodgerblue", "solid"],
+                borderRadius: "6px",
+                color: "white",
+              }}
+              type="submit"
+            >
+              Signup
+            </button>
+
             <p>Already a member?</p>
             <Link to="/login">
               <p>Login</p>
