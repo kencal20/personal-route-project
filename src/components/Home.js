@@ -1,6 +1,6 @@
 import React from "react";
 import { Button } from "react-bootstrap";
-
+import { Link } from "react-router-dom";
 const Home = () => {
   return (
     <div>
@@ -15,7 +15,7 @@ const Home = () => {
       consequat vel in quam. Nullam nec augue risus.
       <br></br>
       <Link to="/signup">
-        <button
+        <Button
           style={{
             background: "red",
             width: "22%",
@@ -26,7 +26,7 @@ const Home = () => {
           }}
         >
           Get Started
-        </button>
+        </Button>
       </Link>
     </div>
   );
