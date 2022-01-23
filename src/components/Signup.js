@@ -13,7 +13,7 @@ function Signup() {
         <div className="Sub_title">
           <h4>Welcome to the time buying App</h4>
         </div>
-        <div className="input">
+        <form>
           <div className="First-name">
             <input type="text" placeholder="First Name" />
           </div>
@@ -41,11 +41,11 @@ function Signup() {
           </div>
           <input type="reset" />
           <input type="submit" />
-          <p>Already a member?</p>
-          <Link to="/login">
-            <p>Login</p>
-          </Link>
-        </div>
+        </form>
+        <p>Already a member?</p>
+        <Link to="/login">
+          <p>Login</p>
+        </Link>
       </div>
     </>
   );
