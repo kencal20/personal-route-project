@@ -34,7 +34,7 @@ class Signup extends Component {
   };
   render() {
     return (
-      <Form >
+      <Form onSubmit={this.handleSubmit}>
         <div className="App">
           <div className="Title">
             <h1>SIGNUP</h1>
@@ -117,7 +117,7 @@ class Signup extends Component {
               color: "white",
             }}
           >
-            login 
+            Signup
           </Button>
         <p>Already a member?</p>
         <Link to="/login">
