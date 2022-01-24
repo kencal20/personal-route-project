@@ -129,5 +129,13 @@ class Signup extends Component {
     );
   }
 }
-
-export default Signup;
+/*
+const mapStateToProps = (state) => {
+  return {
+    users: state.users,
+  };
+};
+const mapDispatchtoProps = {
+  addNewUser: addUser,
+};
+export default connect(mapStateToProps, mapDispatchtoProps)(Form);*/
