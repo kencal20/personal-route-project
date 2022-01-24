@@ -129,6 +129,8 @@ class Signup extends Component {
     );
   }
 }
+
+export default Signup; 
 /*
 const mapStateToProps = (state) => {
   return {
