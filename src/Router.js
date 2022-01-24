@@ -9,7 +9,7 @@ import Home from "./components/Home";
 import Signup from "./components/Signup";
 import Nav from "./components/Nav";
 import Login from "./components/Login";
-import Contacts from "./components/Contacts"
+import Contacts from "./components/Contacts";
 
 export default function Router() {
   return (
