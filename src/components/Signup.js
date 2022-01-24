@@ -1,6 +1,7 @@
 import "../Main_styles.css";
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import {Form,Button} from "react-bootstrap"
 class Signup extends Component {
   constructor(props) {
     super(props);
@@ -33,7 +34,7 @@ class Signup extends Component {
   };
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
+      <Form >
         <div className="App">
           <div className="Title">
             <h1>SIGNUP</h1>
@@ -103,30 +104,28 @@ class Signup extends Component {
                 onChange={this.handlechange}
               />
               <br></br>
-             
             </div>
-            <button
-              style={{
-                background: "dodgerblue",
-                width: "10%",
-                height: "30px",
-                margin: "20px",
-                border: ["1px", "dodgerblue", "solid"],
-                borderRadius: "6px",
-                color: "white",
-              }}
-              type="submit"
-            >
-              Signup
-            </button>
-
-            <p>Already a member?</p>
-            <Link to="/login">
-              <p>Login</p>
-            </Link>
-          </div>
+           
+            <Button type="submit"
+            style={{
+              background: "dodgerblue",
+              width: "10%",
+              height: "30px",
+              margin: "20px",
+              border: ["1px", "dodgerblue", "solid"],
+              borderRadius: "6px",
+              color: "white",
+            }}
+          >
+            login 
+          </Button>
+        <p>Already a member?</p>
+        <Link to="/login">
+          <p>Login</p>
+        </Link>
         </div>
-      </form>
+        </div>
+      </Form>
     );
   }
 }
