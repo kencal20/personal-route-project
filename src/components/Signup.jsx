@@ -14,11 +14,9 @@ const Signup = () => {
       <form>
         <h1>Signup from</h1>
         <label>Email</label>
-        <input type="email" 
-        value={email}/>
+        <input type="email" value={email} />
         <label>Password</label>
-        <input type="password"
-        value={password} />
+        <input type="password" value={password} />
         <Button variant="primary">Submit</Button>
       </form>
     </>
