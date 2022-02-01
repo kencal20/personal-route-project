@@ -33,12 +33,12 @@ export default function Router() {
         </ul>
       </Nav>
       <Routes>
-        <Route path="/signup" element={<Signup />} />
+        <Route path="/signup" exact element={<Signup />} />
 
         <Route path="/login" element={<Login />} />
 
         <Route path="/" element={<Home />} />
-        <Route path="contacts" element={<Contacts />} />
+        <Route path="/contacts" element={<Contacts />} />
       </Routes>
     </AppRouter>
   );
