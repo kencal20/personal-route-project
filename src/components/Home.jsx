@@ -2,6 +2,19 @@ import React from "react";
 import { Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 const Home = () => {
+
+// const {logOut} = useUserAuth()
+
+// const navigate= useNavigate()
+// const handleLogout = async ()=>{
+//   try{
+//     await logOut()
+//     navigate("/login")
+//   }catch(error) {
+//     console.log(error.message)
+//   }
+// }
+
   return (
     <div>
       <h1>Home</h1>
@@ -28,6 +41,7 @@ const Home = () => {
           Get Started
         </Button>
       </Link>
+      {/* <Button variant="primary" onClick={handleLogout}>LogOut</Button> */}
     </div>
   );
 };
